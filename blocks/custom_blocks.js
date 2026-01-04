@@ -1,79 +1,76 @@
 Blockly.defineBlocksWithJsonArray([
-  {
-    "type": "route_fromto",
-    "message0": "%1 %2",
-    "args0": [
-        {
-        "type": "field_dropdown",
-        "name": "url_type",
-        "options": [
-            [
-            "from",
-            "from"
-            ],
-            [
-            "to",
-            "to"
-            ]
-        ]
-        },
-        {
-        "type": "field_input",
-        "name": "url_address",
-        "text": "https://www.example.com"
-        }
-    ],
-    "output": null,
-    "colour": 120,
-    "tooltip": ""
-  },
-  {
-    "type": "route_policy",
-    "message0": "Policy %1", // On ne garde qu'un seul emplacement
-    "args0": [
-        {
-        "type": "input_statement",
-        "name": "policy_content"
-        }
-    ],
-    "previousStatement": null,
-    "nextStatement": null,
-    "colour": 120,
-    "tooltip": "Définit les règles de la politique",
-    "helpUrl": ""
- },
- {
-    "type": "route_rule",
-    "message0": "Les requêtes faites sur l'URL  %1 sont redirigées vers l'URL  %2 %3 si elles respectent les conditions suivantes: %4 Paramètres optionnels: %5",
-    "args0": [
-        {
-        "type": "field_input",
-        "name": "route_url-from",
-        "text": "https://www.example.com/"
-        },
-        {
-        "type": "field_input",
-        "name": "route_url-to",
-        "text": "https://www.example.com/"
-        },
-        {
-        "type": "input_dummy"
-        },
-        {
-        "type": "input_statement",
-        "name": "route-rule_policy",
-        "check": "route_policy"
-        },
-        {
-        "type": "input_statement",
-        "name": "route-rule_option",
-        "check": "route_option"
-        }
-    ],
-    "previousStatement": "routeContent",
-    "nextStatement": "routeContent",
-    "colour": 120,
-    "tooltip": "",
-    "helpUrl": "http://www.example.com/"
+    {
+        "type": "route_rule",
+        "message0": "Les requêtes faites sur l'URL %1",
+        "args0": [
+            {
+                "type": "field_input",
+                "name": "route_url-from",
+                "text": "https://www.example.com/"
+            }
+        ],
+        "message1": "sont redirigées vers l'URL %1",
+        "args1": [
+            {
+                "type": "field_input",
+                "name": "route_url-to",
+                "text": "https://www.example.com/"
+            }
+        ],
+        "message2": "si elles respectent les conditions: %1",
+        "args2": [
+            {
+                "type": "input_statement",
+                "name": "route-rule_policy",
+                "check": "route_policy"
+            }
+        ],
+        "message3": "avec les options: %1",
+        "args3": [
+            {
+                "type": "input_statement",
+                "name": "route-rule_option",
+                "check": "route_option"
+            }
+        ],
+        "previousStatement": "routeContent",
+        "nextStatement": "routeContent",
+        "colour": 120,
+        "tooltip": "Définit une règle de routage avec conditions et options.",
+        "helpUrl": ""
+    },
+    {
+        "type": "route_policy",
+        "tooltip": "",
+        "helpUrl": "",
+        "message0": "La requête est %1 si: %2 %3",
+        "args0": [
+            {
+                "type": "field_dropdown",
+                "name": "NAME",
+                "options": [
+                    [
+                        "autorisée",
+                        "allow"
+                    ],
+                    [
+                        "bloquée",
+                        "deny"
+                    ]
+                ]
+            },
+            {
+                "type": "input_dummy",
+                "name": "route-policy_action"
+            },
+            {
+                "type": "input_statement",
+                "name": "route-policy_condition",
+                "check": "policy_condition"
+            }
+        ],
+        "previousStatement": "route_policy",
+        "nextStatement": "route_policy",
+        "colour": 345
     }
 ]);
