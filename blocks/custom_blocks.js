@@ -79,35 +79,51 @@ Blockly.defineBlocksWithJsonArray([
         "colour": colourPalette.POLICY_BLOCKS
     },
     {
-  "type": "policy_and",
-  "tooltip": "",
-  "helpUrl": "",
-  "message0": "Et %1",
-  "args0": [
+        "type": "policy_and",
+        "tooltip": "",
+        "helpUrl": "",
+        "message0": "Et %1",
+        "args0": [
+            {
+                "type": "input_statement",
+                "name": "policy-and_element",
+                "check": "policy_condition"
+            }
+        ],
+        "previousStatement": "policy_condition",
+        "nextStatement": "policy_condition",
+        "colour": colourPalette.POLICY_BLOCKS
+    },
     {
-      "type": "input_statement",
-      "name": "policy-and_element",
-      "check": "policy_condition"
-    }
-  ],
-  "previousStatement": "policy_condition",
-  "nextStatement": "policy_condition",
-  "colour": colourPalette.POLICY_BLOCKS
-},
-{
-  "type": "policy_or",
-  "tooltip": "",
-  "helpUrl": "",
-  "message0": "Ou %1",
-  "args0": [
+        "type": "policy_or",
+        "tooltip": "",
+        "helpUrl": "",
+        "message0": "Ou %1",
+        "args0": [
+            {
+                "type": "input_statement",
+                "name": "policy-or_element",
+                "check": "policy_condition"
+            }
+        ],
+        "previousStatement": "policy_condition",
+        "nextStatement": "policy_condition",
+        "colour": colourPalette.POLICY_BLOCKS
+    },
     {
-      "type": "input_statement",
-      "name": "policy-or_element",
-      "check": "policy_condition"
+        "type": "policy_not",
+        "tooltip": "",
+        "helpUrl": "",
+        "message0": "N'est pas %1",
+        "args0": [
+            {
+                "type": "input_statement",
+                "name": "policy-not_element",
+                "check": "policy_condition"
+            }
+        ],
+        "previousStatement": "policy_condition",
+        "nextStatement": "policy_condition",
+        "colour": colourPalette.POLICY_BLOCKS
     }
-  ],
-  "previousStatement": "policy_condition",
-  "nextStatement": "policy_condition",
-  "colour": colourPalette.POLICY_BLOCKS
-}
 ]);
