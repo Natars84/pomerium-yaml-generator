@@ -1,0 +1,4 @@
+export const CATEGORY_COLOUR = {
+    ROUTE: 120,
+    POLICY_LOGICAL_OPERATOR: 345
+};
