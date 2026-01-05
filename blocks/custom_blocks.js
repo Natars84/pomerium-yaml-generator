@@ -1,3 +1,8 @@
+const colourPalette = {
+    ROUTE_BLOCKS: 120,
+    POLICY_BLOCKS: 345
+};
+
 Blockly.defineBlocksWithJsonArray([
     {
         "type": "route_rule",
@@ -35,7 +40,7 @@ Blockly.defineBlocksWithJsonArray([
         ],
         "previousStatement": "routeContent",
         "nextStatement": "routeContent",
-        "colour": 120,
+        "colour": colourPalette.ROUTE_BLOCKS,
         "tooltip": "Définit une règle de routage avec conditions et options.",
         "helpUrl": ""
     },
@@ -71,6 +76,6 @@ Blockly.defineBlocksWithJsonArray([
         ],
         "previousStatement": "route_policy",
         "nextStatement": "route_policy",
-        "colour": 345
+        "colour": colourPalette.POLICY_BLOCKS
     }
 ]);
