@@ -23,7 +23,15 @@ const workspace = Blockly.inject('blocklyDiv', {
           { "kind": "block", "type": "policy-logic_and" },
           { "kind": "block", "type": "policy-logic_or" },
           { "kind": "block", "type": "policy-logic_not" },
-          { "kind": "block", "type": "policy-logic_nor" }
+          { "kind": "block", "type": "policy-logic_nor" },
+          { "kind": "block", "type": "policy_criteria_domain" },
+          { "kind": "block", "type": "policy_criteria_email" },
+          { "kind": "block", "type": "policy_criteria_user" },
+          { "kind": "block", "type": "policy_criteria_http_method" },
+          { "kind": "block", "type": "policy_criteria_http_path" },
+          { "kind": "block", "type": "policy_criteria_authenticated_user" },
+          { "kind": "block", "type": "policy_criteria_allow" },
+          { "kind": "block", "type": "policy_criteria_reject" },
         ]
       }
     ]

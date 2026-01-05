@@ -130,7 +130,7 @@ Blockly.defineBlocksWithJsonArray([
         "message0": "Aucun de %1",
         "args0": [
             {
-                "type": "input_statement",
+                "type": "inp-logicut_statement",
                 "name": "policy-not_element",
                 "check": BLOCK_CATEGORY.POLICY_CONDITION
             }
@@ -138,5 +138,164 @@ Blockly.defineBlocksWithJsonArray([
         "previousStatement": BLOCK_CATEGORY.POLICY_CONDITION,
         "nextStatement": BLOCK_CATEGORY.POLICY_CONDITION,
         "colour": CATEGORY_COLOUR.POLICY_CONDITION
+    },
+    {
+        "type": "policy_criteria_domain",
+        "tooltip": "",
+        "helpUrl": "",
+        "message0": "Le nom de domaine du mail est %1 %2",
+        "args0": [
+            {
+                "type": "field_input",
+                "name": "domain",
+                "text": "default"
+            },
+            {
+                "type": "input_dummy",
+                "name": "dummy"
+            }
+        ],
+        "previousStatement": "fixme-policy_condition",
+        "nextStatement": "fixme-policy_condition",
+        "colour": 225
+    },
+    {
+        "type": "policy_criteria_email",
+        "tooltip": "",
+        "helpUrl": "",
+        "message0": "L'adresse email est %1 %2",
+        "args0": [
+            {
+                "type": "field_input",
+                "name": "email",
+                "text": "default"
+            },
+            {
+                "type": "input_dummy",
+                "name": "dummy"
+            }
+        ],
+        "previousStatement": "fixme-policy_condition",
+        "nextStatement": "fixme-policy_condition",
+        "colour": 225
+    },
+    {
+        "type": "policy_criteria_user",
+        "tooltip": "",
+        "helpUrl": "",
+        "message0": "L'ID de l'utilisateur est %1 %2",
+        "args0": [
+            {
+                "type": "field_input",
+                "name": "user",
+                "text": "default"
+            },
+            {
+                "type": "input_dummy",
+                "name": "dummy"
+            }
+        ],
+        "previousStatement": "fixme-policy_condition",
+        "nextStatement": "fixme-policy_condition",
+        "colour": 225
+    },
+    {
+        "type": "policy_criteria_http_method",
+        "tooltip": "",
+        "helpUrl": "",
+        "message0": "La méthode HTTP est %1 %2",
+        "args0": [
+            {
+                "type": "field_input",
+                "name": "http_method",
+                "text": "default"
+            },
+            {
+                "type": "input_dummy",
+                "name": "dummy"
+            }
+        ],
+        "previousStatement": "fixme-policy_condition",
+        "nextStatement": "fixme-policy_condition",
+        "colour": 225
+    },
+    {
+        "type": "policy_criteria_http_path",
+        "tooltip": "",
+        "helpUrl": "",
+        "message0": "Le chemin HTTP est %1 %2",
+        "args0": [
+            {
+                "type": "field_input",
+                "name": "http_path",
+                "text": "default"
+            },
+            {
+                "type": "input_dummy",
+                "name": "dummy"
+            }
+        ],
+        "previousStatement": "fixme-policy_condition",
+        "nextStatement": "fixme-policy_condition",
+        "colour": 225
+    },
+    {
+  "type": "policy_criteria_authenticated_user",
+  "tooltip": "",
+  "helpUrl": "",
+  "message0": "L'utilisateur %1 authentifié %2",
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "authentification_status",
+      "options": [
+        [
+          "s'est",
+          "true"
+        ],
+        [
+          "ne s'est pas",
+          "false"
+        ]
+      ]
+    },
+    {
+      "type": "input_dummy",
+      "name": "dummy"
     }
+  ],
+  "previousStatement": "fixme-policy_condition",
+  "nextStatement": "fixme-policy_condition",
+  "colour": 225
+},
+{
+  "type": "policy_criteria_allow",
+  "tooltip": "",
+  "helpUrl": "",
+  "message0": "Toujours autoriser. %1",
+  "args0": [
+    {
+      "type": "input_dummy",
+      "name": "dummy"
+    }
+  ],
+  "previousStatement": "fixme-policy_condition",
+  "nextStatement": "fixme-policy_condition",
+  "colour": 225
+},
+{
+  "type": "policy_criteria_reject",
+  "tooltip": "",
+  "helpUrl": "",
+  "message0": "Toujours refuser. %1",
+  "args0": [
+    {
+      "type": "input_dummy",
+      "name": "dummy"
+    }
+  ],
+  "previousStatement": "fixme-policy_condition",
+  "nextStatement": "fixme-policy_condition",
+  "colour": 225
+}
 ]);
