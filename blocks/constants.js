@@ -1,6 +1,6 @@
 export const CATEGORY_COLOUR = {
     ROUTE: 120,
-    POLICY_LOGICAL_OPERATOR: 345
+    POLICY_CONDITION: 345
 };
 
 export const BLOCK_CATEGORY = {
