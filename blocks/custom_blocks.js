@@ -1,4 +1,4 @@
-import { CATEGORY_COLOUR } from "./constants.js"; 
+import { CATEGORY_COLOUR, BLOCK_CATEGORY } from "./constants.js"; 
 
 Blockly.defineBlocksWithJsonArray([
     {
@@ -24,7 +24,7 @@ Blockly.defineBlocksWithJsonArray([
             {
                 "type": "input_statement",
                 "name": "route-rule_policy",
-                "check": "route_policy"
+                "check": BLOCK_CATEGORY.ROUTE_POLICY
             }
         ],
         "message3": "avec les options: %1",
@@ -32,17 +32,17 @@ Blockly.defineBlocksWithJsonArray([
             {
                 "type": "input_statement",
                 "name": "route-rule_option",
-                "check": "route_option"
+                "check": BLOCK_CATEGORY.ROUTE_OPTIONS
             }
         ],
-        "previousStatement": "routeContent",
-        "nextStatement": "routeContent",
+        "previousStatement": BLOCK_CATEGORY.ROUTE_CONTENT,
+        "nextStatement": BLOCK_CATEGORY.ROUTE_CONTENT,
         "colour": CATEGORY_COLOUR.ROUTE,
         "tooltip": "Définit une règle de routage avec conditions et options.",
         "helpUrl": ""
     },
     {
-        "type": "route_policy",
+        "type": "route_action",
         "tooltip": "",
         "helpUrl": "",
         "message0": "La requête est %1 si: %2 %3",
@@ -68,11 +68,11 @@ Blockly.defineBlocksWithJsonArray([
             {
                 "type": "input_statement",
                 "name": "route-policy_condition",
-                "check": "policy_condition"
+                "check": BLOCK_CATEGORY.POLICY_CONDITION
             }
         ],
-        "previousStatement": "route_policy",
-        "nextStatement": "route_policy",
+        "previousStatement": BLOCK_CATEGORY.ROUTE_POLICY,
+        "nextStatement": BLOCK_CATEGORY.ROUTE_POLICY,
         "colour": CATEGORY_COLOUR.ROUTE
     },
     {
@@ -84,11 +84,11 @@ Blockly.defineBlocksWithJsonArray([
             {
                 "type": "input_statement",
                 "name": "policy-and_element",
-                "check": "policy_condition"
+                "check": BLOCK_CATEGORY.POLICY_CONDITION
             }
         ],
-        "previousStatement": "policy_condition",
-        "nextStatement": "policy_condition",
+        "previousStatement": BLOCK_CATEGORY.POLICY_CONDITION,
+        "nextStatement": BLOCK_CATEGORY.POLICY_CONDITION,
         "colour": CATEGORY_COLOUR.POLICY_LOGICAL_OPERATOR
     },
     {
@@ -100,11 +100,11 @@ Blockly.defineBlocksWithJsonArray([
             {
                 "type": "input_statement",
                 "name": "policy-or_element",
-                "check": "policy_condition"
+                "check": BLOCK_CATEGORY.POLICY_CONDITION
             }
         ],
-        "previousStatement": "policy_condition",
-        "nextStatement": "policy_condition",
+        "previousStatement": BLOCK_CATEGORY.POLICY_CONDITION,
+        "nextStatement": BLOCK_CATEGORY.POLICY_CONDITION,
         "colour": CATEGORY_COLOUR.POLICY_LOGICAL_OPERATOR
     },
     {
@@ -116,11 +116,11 @@ Blockly.defineBlocksWithJsonArray([
             {
                 "type": "input_statement",
                 "name": "policy-not_element",
-                "check": "policy_condition"
+                "check": BLOCK_CATEGORY.POLICY_CONDITION
             }
         ],
-        "previousStatement": "policy_condition",
-        "nextStatement": "policy_condition",
+        "previousStatement": BLOCK_CATEGORY.POLICY_CONDITION,
+        "nextStatement": BLOCK_CATEGORY.POLICY_CONDITION,
         "colour": CATEGORY_COLOUR.POLICY_LOGICAL_OPERATOR
     }
 ]);
