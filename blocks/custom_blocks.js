@@ -1,7 +1,4 @@
-const colourPalette = {
-    ROUTE_BLOCKS: 120,
-    POLICY_BLOCKS: 345
-};
+import { CATEGORY_COLOUR } from "./constants.js"; 
 
 Blockly.defineBlocksWithJsonArray([
     {
@@ -40,7 +37,7 @@ Blockly.defineBlocksWithJsonArray([
         ],
         "previousStatement": "routeContent",
         "nextStatement": "routeContent",
-        "colour": colourPalette.ROUTE_BLOCKS,
+        "colour": CATEGORY_COLOUR.ROUTE,
         "tooltip": "Définit une règle de routage avec conditions et options.",
         "helpUrl": ""
     },
@@ -76,7 +73,7 @@ Blockly.defineBlocksWithJsonArray([
         ],
         "previousStatement": "route_policy",
         "nextStatement": "route_policy",
-        "colour": colourPalette.POLICY_BLOCKS
+        "colour": CATEGORY_COLOUR.ROUTE
     },
     {
         "type": "policy_and",
@@ -92,7 +89,7 @@ Blockly.defineBlocksWithJsonArray([
         ],
         "previousStatement": "policy_condition",
         "nextStatement": "policy_condition",
-        "colour": colourPalette.POLICY_BLOCKS
+        "colour": CATEGORY_COLOUR.POLICY_LOGICAL_OPERATOR
     },
     {
         "type": "policy_or",
@@ -108,7 +105,7 @@ Blockly.defineBlocksWithJsonArray([
         ],
         "previousStatement": "policy_condition",
         "nextStatement": "policy_condition",
-        "colour": colourPalette.POLICY_BLOCKS
+        "colour": CATEGORY_COLOUR.POLICY_LOGICAL_OPERATOR
     },
     {
         "type": "policy_not",
@@ -124,6 +121,6 @@ Blockly.defineBlocksWithJsonArray([
         ],
         "previousStatement": "policy_condition",
         "nextStatement": "policy_condition",
-        "colour": colourPalette.POLICY_BLOCKS
+        "colour": CATEGORY_COLOUR.POLICY_LOGICAL_OPERATOR
     }
 ]);
