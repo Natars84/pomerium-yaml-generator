@@ -1,4 +1,4 @@
-import { CATEGORY_COLOUR, BLOCK_CATEGORY } from "./constants.js"; 
+import { CATEGORY_COLOUR, BLOCK_CATEGORY } from "./constants.js";
 
 Blockly.defineBlocksWithJsonArray([
     {
@@ -76,7 +76,7 @@ Blockly.defineBlocksWithJsonArray([
         "colour": CATEGORY_COLOUR.ROUTE
     },
     {
-        "type": "policy_and",
+        "type": "policy-logic_and",
         "tooltip": "",
         "helpUrl": "",
         "message0": "Et %1",
@@ -92,7 +92,7 @@ Blockly.defineBlocksWithJsonArray([
         "colour": CATEGORY_COLOUR.POLICY_CONDITION
     },
     {
-        "type": "policy_or",
+        "type": "policy-logic_or",
         "tooltip": "",
         "helpUrl": "",
         "message0": "Ou %1",
@@ -108,10 +108,26 @@ Blockly.defineBlocksWithJsonArray([
         "colour": CATEGORY_COLOUR.POLICY_CONDITION
     },
     {
-        "type": "policy_not",
+        "type": "policy-logic_not",
         "tooltip": "",
         "helpUrl": "",
         "message0": "N'est pas %1",
+        "args0": [
+            {
+                "type": "input_statement",
+                "name": "policy-not_element",
+                "check": BLOCK_CATEGORY.POLICY_CONDITION
+            }
+        ],
+        "previousStatement": BLOCK_CATEGORY.POLICY_CONDITION,
+        "nextStatement": BLOCK_CATEGORY.POLICY_CONDITION,
+        "colour": CATEGORY_COLOUR.POLICY_CONDITION
+    },
+    {
+        "type": "policy-logic_nor",
+        "tooltip": "",
+        "helpUrl": "",
+        "message0": "Aucun de %1",
         "args0": [
             {
                 "type": "input_statement",
