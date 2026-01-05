@@ -89,7 +89,7 @@ Blockly.defineBlocksWithJsonArray([
         ],
         "previousStatement": BLOCK_CATEGORY.POLICY_CONDITION,
         "nextStatement": BLOCK_CATEGORY.POLICY_CONDITION,
-        "colour": CATEGORY_COLOUR.POLICY_LOGICAL_OPERATOR
+        "colour": CATEGORY_COLOUR.POLICY_CONDITION
     },
     {
         "type": "policy_or",
@@ -105,7 +105,7 @@ Blockly.defineBlocksWithJsonArray([
         ],
         "previousStatement": BLOCK_CATEGORY.POLICY_CONDITION,
         "nextStatement": BLOCK_CATEGORY.POLICY_CONDITION,
-        "colour": CATEGORY_COLOUR.POLICY_LOGICAL_OPERATOR
+        "colour": CATEGORY_COLOUR.POLICY_CONDITION
     },
     {
         "type": "policy_not",
@@ -121,6 +121,6 @@ Blockly.defineBlocksWithJsonArray([
         ],
         "previousStatement": BLOCK_CATEGORY.POLICY_CONDITION,
         "nextStatement": BLOCK_CATEGORY.POLICY_CONDITION,
-        "colour": CATEGORY_COLOUR.POLICY_LOGICAL_OPERATOR
+        "colour": CATEGORY_COLOUR.POLICY_CONDITION
     }
 ]);
