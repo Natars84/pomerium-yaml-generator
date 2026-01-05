@@ -3,7 +3,9 @@ const workspace = Blockly.inject('blocklyDiv', {
     "kind": "flyoutToolbox",
     "contents": [
       { "kind": "block", "type": "route_rule" },
-      { "kind": "block", "type": "route_policy" }
+      { "kind": "block", "type": "route_policy" },
+      { "kind": "block", "type": "policy_and" },
+      { "kind": "block", "type": "policy_or" }
     ]
   }
 });
