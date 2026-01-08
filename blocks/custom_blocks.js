@@ -1,4 +1,5 @@
 import { CATEGORY_COLOUR, BLOCK_CATEGORY } from "./constants.js";
+import { STRING_MATCHERS } from "./matchers.js";
 
 Blockly.defineBlocksWithJsonArray([
     //* --- ENTETE DE ROUTES --- */
@@ -219,5 +220,46 @@ Blockly.defineBlocksWithJsonArray([
         "previousStatement": BLOCK_CATEGORY.POLICY_CONDITION,
         "nextStatement": BLOCK_CATEGORY.POLICY_CONDITION,
         "colour": CATEGORY_COLOUR.POLICY_CONDITION
+    },
+    {
+        "type": "policy_criteria_client_certificate",
+        "message0": "Certificat TLS Client :",
+        // Ligne Empreinte (Directe, pas de matcher selon la doc)
+        "message1": "%1 Empreinte (SHA256) est %2",
+        "args1": [
+            { "type": "field_checkbox", "name": "HAS_FINGERPRINT", "checked": false },
+            { "type": "field_input", "name": "FINGERPRINT_VALUE", "text": "" }
+        ],
+        // Ligne DNS (SAN) + String Matcher
+        "message2": "%1 Nom DNS (SAN) %2 %3",
+        "args2": [
+            { "type": "field_checkbox", "name": "HAS_DNS", "checked": false },
+            { "type": "field_dropdown", "name": "DNS_MATCHER", "options": STRING_MATCHERS },
+            { "type": "field_input", "name": "DNS_VALUE", "text": "" }
+        ],
+        // Ligne Email + String Matcher
+        "message3": "%1 Email associé %2 %3",
+        "args3": [
+            { "type": "field_checkbox", "name": "HAS_EMAIL", "checked": false },
+            { "type": "field_dropdown", "name": "EMAIL_MATCHER", "options": STRING_MATCHERS },
+            { "type": "field_input", "name": "EMAIL_VALUE", "text": "" }
+        ],
+        // Ligne URI + String Matcher
+        "message4": "%1 URI (SAN) %2 %3",
+        "args4": [
+            { "type": "field_checkbox", "name": "HAS_URI", "checked": false },
+            { "type": "field_dropdown", "name": "URI_MATCHER", "options": STRING_MATCHERS },
+            { "type": "field_input", "name": "URI_VALUE", "text": "" }
+        ],
+        // Ligne Hash SPKI (Directe)
+        "message5": "%1 Hash SPKI (SHA256) est %2",
+        "args5": [
+            { "type": "field_checkbox", "name": "HAS_SPKI", "checked": false },
+            { "type": "field_input", "name": "SPKI_VALUE", "text": "" }
+        ],
+        "previousStatement": BLOCK_CATEGORY.POLICY_CONDITION,
+        "nextStatement": BLOCK_CATEGORY.POLICY_CONDITION,
+        "colour": CATEGORY_COLOUR.POLICY_CONDITION,
+        "tooltip": "Vérifie les propriétés du certificat TLS du client (Fingerprint, SAN, SPKI)."
     }
 ]);
