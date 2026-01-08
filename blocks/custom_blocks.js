@@ -4,7 +4,7 @@ Blockly.defineBlocksWithJsonArray([
     //* --- ENTETE DE ROUTES --- */
     {
         "type": "route_main",
-        "message0": "Appliquer les politiques suivantes:",
+        "message0": "Appliquer les règles de routage suivantes:",
         "message1": "%1",
         "args1": [
             {
@@ -34,7 +34,7 @@ Blockly.defineBlocksWithJsonArray([
                 "text": "https://www.example.com/"
             }
         ],
-        "message2": "si elles respectent les conditions: %1",
+        "message2": "Appliquer les règles suivantes: %1",
         "args2": [
             {
                 "type": "input_statement",
@@ -42,7 +42,7 @@ Blockly.defineBlocksWithJsonArray([
                 "check": BLOCK_CATEGORY.ROUTE_POLICY
             }
         ],
-        "message3": "avec les options: %1",
+        "message3": "Appliquer les options suivantes: %1",
         "args3": [
             {
                 "type": "input_statement",
@@ -57,7 +57,7 @@ Blockly.defineBlocksWithJsonArray([
     },
     {
         "type": "route_action",
-        "message0": "La requête est %1 si: %2",
+        "message0": "La requête est %1 si:",
         "args0": [
             {
                 "type": "field_dropdown",
@@ -66,7 +66,10 @@ Blockly.defineBlocksWithJsonArray([
                     ["autorisée", "allow"],
                     ["bloquée", "deny"]
                 ]
-            },
+            }
+        ],
+        "message1": "%1",
+        "args1": [
             {
                 "type": "input_statement",
                 "name": "conditions",
@@ -75,7 +78,8 @@ Blockly.defineBlocksWithJsonArray([
         ],
         "previousStatement": BLOCK_CATEGORY.ROUTE_POLICY,
         "nextStatement": BLOCK_CATEGORY.ROUTE_POLICY,
-        "colour": CATEGORY_COLOUR.ROUTE
+        "colour": CATEGORY_COLOUR.ROUTE,
+        "tooltip": "La condition bloquante est prioritaire sur la condition autorisante."
     },
     /* --- OPERATEURS LOGIQUES --- */
     {
