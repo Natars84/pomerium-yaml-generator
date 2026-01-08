@@ -8,22 +8,30 @@ const workspace = Blockly.inject('blocklyDiv', {
     "contents": [
       {
         "kind": "category",
-        "name": "Routes",
-        "colour": CATEGORY_COLOUR.ROUTE, // Vert
+        "name": "Politiques - routage",
+        "colour": CATEGORY_COLOUR.ROUTE,
         "contents": [
-          { "kind": "block", "type": "route_rule" }
+          { "kind": "block", "type": "route_main" },
+          { "kind": "block", "type": "route_rule" },
+          { "kind": "block", "type": "route_action" }
         ]
       },
       {
         "kind": "category",
-        "name": "Conditions",
-        "colour": CATEGORY_COLOUR.POLICY_CONDITION, // Bleu
+        "name": "Politiques - opérations logiques",
+        "colour": CATEGORY_COLOUR.POLICY_LOGIC,
         "contents": [
-          { "kind": "block", "type": "route_action" },
           { "kind": "block", "type": "policy-logic_and" },
           { "kind": "block", "type": "policy-logic_or" },
           { "kind": "block", "type": "policy-logic_not" },
-          { "kind": "block", "type": "policy-logic_nor" },
+          { "kind": "block", "type": "policy-logic_nor" }
+        ]
+      },
+      {
+        "kind": "category",
+        "name": "Politiques - conditions",
+        "colour": CATEGORY_COLOUR.POLICY_CONDITION,
+        "contents": [
           { "kind": "block", "type": "policy_criteria_domain" },
           { "kind": "block", "type": "policy_criteria_email" },
           { "kind": "block", "type": "policy_criteria_user" },
@@ -31,7 +39,7 @@ const workspace = Blockly.inject('blocklyDiv', {
           { "kind": "block", "type": "policy_criteria_http_path" },
           { "kind": "block", "type": "policy_criteria_authenticated_user" },
           { "kind": "block", "type": "policy_criteria_allow" },
-          { "kind": "block", "type": "policy_criteria_reject" },
+          { "kind": "block", "type": "policy_criteria_reject" }
         ]
       }
     ]
