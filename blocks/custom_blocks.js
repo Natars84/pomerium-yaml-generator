@@ -1,6 +1,21 @@
 import { CATEGORY_COLOUR, BLOCK_CATEGORY } from "./constants.js";
 
 Blockly.defineBlocksWithJsonArray([
+    //* --- ENTETE DE ROUTES --- */
+    {
+        "type": "route_main",
+        "message0": "Appliquer les politiques suivantes:",
+        "message1": "%1",
+        "args1": [
+            {
+                "type": "input_statement",
+                "name": "policies",
+                "check": BLOCK_CATEGORY.ROUTE_CONTENT
+            }
+        ],
+        "previousStatement": BLOCK_CATEGORY.CONFIG_GENERALE,
+        "colour": CATEGORY_COLOUR.ROUTE,
+    },
     {
         "type": "route_rule",
         "message0": "Les requêtes faites sur l'URL %1",
@@ -75,7 +90,7 @@ Blockly.defineBlocksWithJsonArray([
         ],
         "previousStatement": BLOCK_CATEGORY.POLICY_CONDITION,
         "nextStatement": BLOCK_CATEGORY.POLICY_CONDITION,
-        "colour": CATEGORY_COLOUR.POLICY_CONDITION
+        "colour": CATEGORY_COLOUR.POLICY_LOGIC
     },
     {
         "type": "policy-logic_or",
@@ -89,7 +104,7 @@ Blockly.defineBlocksWithJsonArray([
         ],
         "previousStatement": BLOCK_CATEGORY.POLICY_CONDITION,
         "nextStatement": BLOCK_CATEGORY.POLICY_CONDITION,
-        "colour": CATEGORY_COLOUR.POLICY_CONDITION
+        "colour": CATEGORY_COLOUR.POLICY_LOGIC
     },
     {
         "type": "policy-logic_not",
@@ -103,7 +118,7 @@ Blockly.defineBlocksWithJsonArray([
         ],
         "previousStatement": BLOCK_CATEGORY.POLICY_CONDITION,
         "nextStatement": BLOCK_CATEGORY.POLICY_CONDITION,
-        "colour": CATEGORY_COLOUR.POLICY_CONDITION
+        "colour": CATEGORY_COLOUR.POLICY_LOGIC
     },
     {
         "type": "policy-logic_nor",
@@ -117,7 +132,7 @@ Blockly.defineBlocksWithJsonArray([
         ],
         "previousStatement": BLOCK_CATEGORY.POLICY_CONDITION,
         "nextStatement": BLOCK_CATEGORY.POLICY_CONDITION,
-        "colour": CATEGORY_COLOUR.POLICY_CONDITION
+        "colour": CATEGORY_COLOUR.POLICY_LOGIC
     },
     /* --- CRITERES --- */
     {
