@@ -38,6 +38,7 @@ const workspace = Blockly.inject('blocklyDiv', {
           { "kind": "block", "type": "policy_criteria_http_method" },
           { "kind": "block", "type": "policy_criteria_http_path" },
           { "kind": "block", "type": "policy_criteria_authenticated_user" },
+          { "kind": "block", "type": "policy_criteria_client_certificate" },
           { "kind": "block", "type": "policy_criteria_allow" },
           { "kind": "block", "type": "policy_criteria_reject" }
         ]
